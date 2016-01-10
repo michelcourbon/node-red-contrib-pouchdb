@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    RED.nodes.registerType('pouchdbaccess',{
+        category: 'storage-input',
+        color: '#a6bbcf',
+        defaults: {
+		name: {value:""},
+		server: {value:"http://127.0.0.1:5984"},
+		database : {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "pouchdb.png",
+        label: function() {
+            return this.name||"pouchdbaccess";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="pouchdbaccess">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-host"><i class="icon-tag"></i> Server</label>
+        <input type="text" id="node-input-server" placeholder="Server">
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> DataBase</label>
+        <input type="text" id="node-input-database" placeholder="DataBase">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="pouchdbaccess">
+    <p>A simple node to write document into (couchDB/pouchdb) database</p>
+</script>
+
+
+</script>

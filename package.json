@@ -1,0 +1,29 @@
+{
+  "name": "node-red-contrib-pouchdb",
+  "version": "0.0.1",
+  "description": "Simple pouchdb access node for node-red",
+  "dependencies": {
+	"pouchdb":"5.1.0"
+  },
+  "keywords": [
+	"node-red",
+	"pouchdb"
+  ],
+  "node-red": {
+    "nodes": {
+      "pouchdbaccess": "pouchdb/pouchdbaccess.js"
+    }
+  },
+  "repository": {
+		"type": "git",
+		"url": "https://github.com/michelcourbon/node-red-contrib-pouchdb.git"
+  },
+  "author" : {
+		"name" : "mcour42",
+		"email" : "mcour42com@gmail.com",
+		"url" : "https://github.com/michelcourbon"
+  },
+  "_id": "node-red-contrib-pouchdb@0.0.1",
+  "licence":"Apache-2.0",
+  "homepage": "https://github.com/hjespers/michelcourbon/node-red-contrib-pouchdb"
+}
