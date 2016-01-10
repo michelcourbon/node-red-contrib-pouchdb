@@ -30,7 +30,9 @@ Example
 -------
 if you want try it, the 2 possibilities in the node 
 ![node-red-contrib-pouchdb-flow](pouchdbExample.png)
+
 the flow text to import into your node-red
+
 	[{"id":"8d53fad9.217c08","type":"debug","z":"1e25904c.4569e","name":"","active":true,"console":"false","complete":"false","x":432,"y":55,"wires":[]},{"id":"a2fad7c9.f51158","type":"inject","z":"1e25904c.4569e","name":"","topic":"","payload":"","payloadType":"date","repeat":"","crontab":"","once":false,"x":103,"y":88,"wires":[["97531f7f.4a29"]]},{"id":"ef2551ce.5d1cc8","type":"pouchdbaccess","z":"1e25904c.4569e","name":"pouchdb server test","server":"http://127.0.0.1:5984","database":"test","x":344,"y":121,"wires":[["72447dc.f019784"]]},{"id":"97531f7f.4a29","type":"function","z":"1e25904c.4569e","name":"tojson-mqtt","func":"msg.payload={\"time\":msg.payload,\"topic\":\"/home/temp\",\"value\":12.3};\n\nreturn msg;","outputs":1,"noerr":0,"x":242,"y":50,"wires":[["ef2551ce.5d1cc8","8d53fad9.217c08"]]},{"id":"72447dc.f019784","type":"debug","z":"1e25904c.4569e","name":"","active":true,"console":"false","complete":"false","x":537,"y":122,"wires":[]},{"id":"650c5fed.8d6198","type":"inject","z":"1e25904c.4569e","name":"database creation","topic":"database","payload":"test2","payloadType":"string","repeat":"","crontab":"","once":false,"x":132,"y":169,"wires":[["ef2551ce.5d1cc8"]]}]
 
 Authors
